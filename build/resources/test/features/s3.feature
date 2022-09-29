@@ -19,9 +19,9 @@ Feature: get the log
     Then match bol contains fileName
 
   @DownloadFileS3
-  Scenario: I want to list get a file
-    Given def resjson = aws.downloadFileS3(bucket,fileName)
+  Scenario: I want to list get a fill
+    Given json resjson =  aws.downloadFileS3(bucket,fileName)
     When print resjson
-    * print resjson.initialdaytrx
-    Then match resjson contains "14"
+    When print resjson.transactionid
+    Then match resjson.transactionid == "f3e288f0-346e-11ed-49b3-458742914e94"
 

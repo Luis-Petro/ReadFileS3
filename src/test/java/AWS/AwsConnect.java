@@ -63,7 +63,7 @@ public class AwsConnect {
 
 
 
-    public static Object downloadFileS3(String bucket, String fileName) throws IOException, InterruptedException {
+    public static String downloadFileS3(String bucket, String fileName) throws IOException, InterruptedException {
         String resS3 ="src/test/java/evaluation/result.json";
         try {
             AmazonS3 s3 = AmazonS3ClientBuilder
@@ -73,6 +73,7 @@ public class AwsConnect {
                     .build();
             S3Object o = s3.getObject(bucket, fileName);
             S3ObjectInputStream s3is = o.getObjectContent();
+
             //ObjectMapper mapper = new ObjectMapper();
             //String jsonstring = mapper.writeValueAsString(o);
             //return jsonstring;
@@ -90,12 +91,12 @@ public class AwsConnect {
                 sb.append(line);
             }
             s3is.close();
-            System.out.println("_________________>"+sb.toString());
+
             String textjson = sb.toString();
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             JSONObject json = new JSONObject(textjson);
-
-            return json;
+            System.out.println("_________________>"+textjson.toString());
+            return textjson;
             //fos.close();
 
         } catch (Exception e) {

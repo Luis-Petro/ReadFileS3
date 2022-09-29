@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>pruebas s3</td>
-            <td>29 sep 2022, 12:28</td>
+            <td>29 sep 2022, 16:07</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@DownloadFileS3</td>
-                    <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
+                    <td      class="passed"    >4</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">4</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="584167000">584ms</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="634746400">634ms</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -182,14 +182,14 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">584ms</span>
+  <span class="lead-duration duration">634ms</span>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">I want to list get a file</span>
+  <span class="name">I want to list get a fill</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -198,15 +198,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -216,14 +216,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
-  <span class="name">def resjson = aws.downloadFileS3(bucket,fileName)</span>
+  <span class="name">json resjson =  aws.downloadFileS3(bucket,fileName)</span>
   
-  <span class="lead-duration duration">561ms</span>
+  <span class="lead-duration duration">601ms</span>
 
   </div>
 
@@ -244,7 +244,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">print resjson</span>
   
-  <span class="lead-duration duration">003ms</span>
+  <span class="lead-duration duration">007ms</span>
 
   </div>
 
@@ -259,7 +259,40 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>12:28:22.053 [print] {&quot;initialdaytrx&quot;:14,&quot;transactionstate&quot;:&quot;exitosa&quot;,&quot;transactioncode&quot;:&quot;0369&quot;,&quot;channel&quot;:&quot;APP&quot;,&quot;authenticationtype&quot;:&quot;CREDENCIAL&quot;,&quot;sessionid&quot;:&quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;,&quot;transactionid&quot;:&quot;f3e288f0-346e-11ed-49b3-458742914e94&quot;,&quot;transactioncodedesc&quot;:&quot;Autenticacion psna natural&quot;,&quot;transactiontype&quot;:&quot;NO_MONETARIA&quot;,&quot;devicenameid&quot;:&quot;29e826c303bfe050&quot;,&quot;finaltrxhour&quot;:&quot;03510007&quot;,&quot;finaltrxday&quot;:14,&quot;browser&quot;:&quot;Chrome&quot;,&quot;trxDate&quot;:45375983602117444664446592,&quot;initialyeartrx&quot;:2022,&quot;responsecode&quot;:&quot;0000&quot;,&quot;technicalcode&quot;:&quot;0000&quot;,&quot;excludeitc&quot;:false,&quot;ip&quot;:&quot;181.135.33.130&quot;,&quot;documenttypecode&quot;:&quot;TIPDOC_FS001&quot;,&quot;documenttype&quot;:&quot;CC&quot;,&quot;appversion&quot;:&quot;4.0.0&quot;,&quot;brandmodel&quot;:&quot;HUAWEI GLK-LX2&quot;,&quot;finaltrxmonth&quot;:9,&quot;initialtrxhour&quot;:&quot;15510006&quot;,&quot;responsecodedesc&quot;:&quot;SUCCESS&quot;,&quot;field1&quot;:&quot;SI&quot;,&quot;documentnumber&quot;:&quot;1998226634&quot;,&quot;initialmonthtrx&quot;:9,&quot;osversion&quot;:&quot;HUAWEI 10&quot;,&quot;finaltrxyear&quot;:2022} 
+        <pre>16:07:48.094 [print] {
+  &quot;sessionid&quot;: &quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;,
+  &quot;transactionid&quot;: &quot;f3e288f0-346e-11ed-49b3-458742914e94&quot;,
+  &quot;initialyeartrx&quot;: 2022,
+  &quot;initialmonthtrx&quot;: 9,
+  &quot;initialdaytrx&quot;: 14,
+  &quot;initialtrxhour&quot;: &quot;15510006&quot;,
+  &quot;finaltrxyear&quot;: 2022,
+  &quot;finaltrxmonth&quot;: 9,
+  &quot;finaltrxday&quot;: 14,
+  &quot;finaltrxhour&quot;: &quot;03510007&quot;,
+  &quot;transactioncode&quot;: &quot;0369&quot;,
+  &quot;transactioncodedesc&quot;: &quot;Autenticacion psna natural&quot;,
+  &quot;responsecode&quot;: &quot;0000&quot;,
+  &quot;responsecodedesc&quot;: &quot;SUCCESS&quot;,
+  &quot;technicalcode&quot;: &quot;0000&quot;,
+  &quot;channel&quot;: &quot;APP&quot;,
+  &quot;devicenameid&quot;: &quot;29e826c303bfe050&quot;,
+  &quot;ip&quot;: &quot;181.135.33.130&quot;,
+  &quot;authenticationtype&quot;: &quot;CREDENCIAL&quot;,
+  &quot;transactiontype&quot;: &quot;NO_MONETARIA&quot;,
+  &quot;transactionstate&quot;: &quot;exitosa&quot;,
+  &quot;documenttypecode&quot;: &quot;TIPDOC_FS001&quot;,
+  &quot;documenttype&quot;: &quot;CC&quot;,
+  &quot;documentnumber&quot;: &quot;1998226634&quot;,
+  &quot;brandmodel&quot;: &quot;HUAWEI GLK-LX2&quot;,
+  &quot;osversion&quot;: &quot;HUAWEI 10&quot;,
+  &quot;browser&quot;: &quot;Chrome&quot;,
+  &quot;appversion&quot;: &quot;4.0.0&quot;,
+  &quot;excludeitc&quot;: false,
+  &quot;field1&quot;: &quot;SI&quot;,
+  &quot;trxDate&quot;: 45375983602117444664446592
+}
+ 
 </pre>
       </div>
     </div>
@@ -273,10 +306,10 @@ $(document).ready(function() {
           <div class="step">
         
 <div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print resjson.initialdaytrx</span>
+  <span class="keyword indention">When</span>
+  <span class="name">print resjson.transactionid</span>
   
-  <span class="lead-duration duration">017ms</span>
+  <span class="lead-duration duration">001ms</span>
 
   </div>
 
@@ -291,7 +324,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>12:28:22.070 [print] null 
+        <pre>16:07:48.095 [print] f3e288f0-346e-11ed-49b3-458742914e94 
 </pre>
       </div>
     </div>
@@ -304,55 +337,19 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
-  <span class="name">match resjson contains &quot;14&quot;</span>
+  <span class="name">match resjson.transactionid == &quot;f3e288f0-346e-11ed-49b3-458742914e94&quot;</span>
   
-  <span class="lead-duration duration">002ms</span>
+  <span class="lead-duration duration">024ms</span>
 
   </div>
 
         
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
-          <a>match failed: CONTAINS</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details  in ">
-        <pre>match failed: CONTAINS
-  $ | data types don't match (OTHER:STRING)
-  {&quot;initialdaytrx&quot;:14,&quot;transactionstate&quot;:&quot;exitosa&quot;,&quot;transactioncode&quot;:&quot;0369&quot;,&quot;channel&quot;:&quot;APP&quot;,&quot;authenticationtype&quot;:&quot;CREDENCIAL&quot;,&quot;sessionid&quot;:&quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;,&quot;transactionid&quot;:&quot;f3e288f0-346e-11ed-49b3-458742914e94&quot;,&quot;transactioncodedesc&quot;:&quot;Autenticacion psna natural&quot;,&quot;transactiontype&quot;:&quot;NO_MONETARIA&quot;,&quot;devicenameid&quot;:&quot;29e826c303bfe050&quot;,&quot;finaltrxhour&quot;:&quot;03510007&quot;,&quot;finaltrxday&quot;:14,&quot;browser&quot;:&quot;Chrome&quot;,&quot;trxDate&quot;:45375983602117444664446592,&quot;initialyeartrx&quot;:2022,&quot;responsecode&quot;:&quot;0000&quot;,&quot;technicalcode&quot;:&quot;0000&quot;,&quot;excludeitc&quot;:false,&quot;ip&quot;:&quot;181.135.33.130&quot;,&quot;documenttypecode&quot;:&quot;TIPDOC_FS001&quot;,&quot;documenttype&quot;:&quot;CC&quot;,&quot;appversion&quot;:&quot;4.0.0&quot;,&quot;brandmodel&quot;:&quot;HUAWEI GLK-LX2&quot;,&quot;finaltrxmonth&quot;:9,&quot;initialtrxhour&quot;:&quot;15510006&quot;,&quot;responsecodedesc&quot;:&quot;SUCCESS&quot;,&quot;field1&quot;:&quot;SI&quot;,&quot;documentnumber&quot;:&quot;1998226634&quot;,&quot;initialmonthtrx&quot;:9,&quot;osversion&quot;:&quot;HUAWEI 10&quot;,&quot;finaltrxyear&quot;:2022}
-  '14'
-
-
-classpath:features/s3.feature:26</pre>
-      </div>
-    </div>
-  </div>
-
 
         
         
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details">
-        <pre>12:28:22.073 classpath:features/s3.feature:26
-Then match resjson contains &quot;14&quot;
-match failed: CONTAINS
-  $ | data types don't match (OTHER:STRING)
-  {&quot;initialdaytrx&quot;:14,&quot;transactionstate&quot;:&quot;exitosa&quot;,&quot;transactioncode&quot;:&quot;0369&quot;,&quot;channel&quot;:&quot;APP&quot;,&quot;authenticationtype&quot;:&quot;CREDENCIAL&quot;,&quot;sessionid&quot;:&quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;,&quot;transactionid&quot;:&quot;f3e288f0-346e-11ed-49b3-458742914e94&quot;,&quot;transactioncodedesc&quot;:&quot;Autenticacion psna natural&quot;,&quot;transactiontype&quot;:&quot;NO_MONETARIA&quot;,&quot;devicenameid&quot;:&quot;29e826c303bfe050&quot;,&quot;finaltrxhour&quot;:&quot;03510007&quot;,&quot;finaltrxday&quot;:14,&quot;browser&quot;:&quot;Chrome&quot;,&quot;trxDate&quot;:45375983602117444664446592,&quot;initialyeartrx&quot;:2022,&quot;responsecode&quot;:&quot;0000&quot;,&quot;technicalcode&quot;:&quot;0000&quot;,&quot;excludeitc&quot;:false,&quot;ip&quot;:&quot;181.135.33.130&quot;,&quot;documenttypecode&quot;:&quot;TIPDOC_FS001&quot;,&quot;documenttype&quot;:&quot;CC&quot;,&quot;appversion&quot;:&quot;4.0.0&quot;,&quot;brandmodel&quot;:&quot;HUAWEI GLK-LX2&quot;,&quot;finaltrxmonth&quot;:9,&quot;initialtrxhour&quot;:&quot;15510006&quot;,&quot;responsecodedesc&quot;:&quot;SUCCESS&quot;,&quot;field1&quot;:&quot;SI&quot;,&quot;documentnumber&quot;:&quot;1998226634&quot;,&quot;initialmonthtrx&quot;:9,&quot;osversion&quot;:&quot;HUAWEI 10&quot;,&quot;finaltrxyear&quot;:2022}
-  '14'
-
-
-classpath:features/s3.feature:26
-</pre>
-      </div>
-    </div>
-  </div>
 
         
 
