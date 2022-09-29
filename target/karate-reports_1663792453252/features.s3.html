@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("460702f7-86c0-40e7-b46e-6c360416d89b",{name:"uflorezv"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>features.s3</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-09-21 03:23:32 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[3:22]"><span>[3:22]</span> <span>I want to list get a file</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">features/s3.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">get the log</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:22]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">DownloadFileS3</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:22]</span>
+                <span class="scenario-name">I want to list get a file</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2993</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:22]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.3">
+      <div class="step-ref bg-step">3</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlbase = &quot;https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def fileName = &quot;PruebaUno.log&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def bucket = &quot;pruebas-aws-s&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def aws = Java.type(&#39;AWS.AwsConnect&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>aws.downloadFileS3(bucket,fileName)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2825</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref failed">24</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>def contS3 = read(&quot;../evaluation/result.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">150</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.24">15:23:32.167 classpath:features/s3.feature:24
+When def contS3 = read(&quot;../evaluation/result.json&quot;)
+js failed:
+&gt;&gt;&gt;&gt;
+01: read(&quot;../evaluation/result.json&quot;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: js failed:
+&gt;&gt;&gt;&gt;
+01: &quot;sessionid&quot;: &quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;,
+02:   &quot;transactionid&quot;: &quot;f3e288f0-346e-11ed-49b3-458742914e94&quot;,
+03:   &quot;initialyeartrx&quot;: 2022,
+04:   &quot;initialmonthtrx&quot;: 9,
+05:   &quot;initialdaytrx&quot;: 14,
+06:   &quot;initialtrxhour&quot;: &quot;15510006&quot;,
+07:   &quot;finaltrxyear&quot;: 2022,
+08:   &quot;finaltrxmonth&quot;: 9,
+09:   &quot;finaltrxday&quot;: 14,
+10:   &quot;finaltrxhour&quot;: &quot;03510007&quot;,
+11:   &quot;transactioncode&quot;: &quot;0369&quot;,
+12:   &quot;transactioncodedesc&quot;: &quot;Autenticacion psna natural&quot;,
+13:   &quot;responsecode&quot;: &quot;0000&quot;,
+14:   &quot;responsecodedesc&quot;: &quot;SUCCESS&quot;,
+15:   &quot;technicalcode&quot;: &quot;0000&quot;,
+16:   &quot;channel&quot;: &quot;APP&quot;,
+17:   &quot;devicenameid&quot;: &quot;29e826c303bfe050&quot;,
+18:   &quot;ip&quot;: &quot;181.135.33.130&quot;,
+19:   &quot;authenticationtype&quot;: &quot;CREDENCIAL&quot;,
+20:   &quot;transactiontype&quot;: &quot;NO_MONETARIA&quot;,
+21:   &quot;transactionstate&quot;: &quot;exitosa&quot;,
+22:   &quot;documenttypecode&quot;: &quot;TIPDOC_FS001&quot;,
+23:   &quot;documenttype&quot;: &quot;CC&quot;,
+24:   &quot;documentnumber&quot;: &quot;1998226634&quot;,
+25:   &quot;brandmodel&quot;: &quot;HUAWEI GLK-LX2&quot;,
+26:   &quot;osversion&quot;: &quot;HUAWEI 10&quot;,
+27:   &quot;browser&quot;: &quot;Chrome&quot;,
+28:   &quot;appversion&quot;: &quot;4.0.0&quot;,
+29:   &quot;excludeitc&quot;: false,
+30:   &quot;field1&quot;: &quot;SI&quot;,
+31:   &quot;trxDate&quot;: 4.5375983602117444664446592e+25
+32: }
+33: {
+34:   &quot;sessionid&quot;: &quot;ad4ca910-346f-11ed-4ca4-41af40b44fb4&quot;,
+35:   &quot;transactionid&quot;: &quot;c3c11aa0-346f-11ed-4aba-49be4091488a&quot;,
+36:   &quot;initialyeartrx&quot;: 2022,
+37:   &quot;initialmonthtrx&quot;: 9,
+38:   &quot;initialdaytrx&quot;: 14,
+39:   &quot;initialtrxhour&quot;: &quot;15560054&quot;,
+40:   &quot;finaltrxyear&quot;: 2022,
+41:   &quot;finaltrxmonth&quot;: 9,
+42:   &quot;finaltrxday&quot;: 14,
+43:   &quot;finaltrxhour&quot;: &quot;03560056&quot;,
+44:   &quot;transactioncode&quot;: &quot;0369&quot;,
+45:   &quot;transactioncodedesc&quot;: &quot;Autenticacion psna natural&quot;,
+46:   &quot;responsecode&quot;: &quot;0000&quot;,
+47:   &quot;responsecodedesc&quot;: &quot;SUCCESS&quot;,
+48:   &quot;technicalcode&quot;: &quot;0000&quot;,
+49:   &quot;channel&quot;: &quot;APP&quot;,
+50:   &quot;devicenameid&quot;: &quot;29e826c303bfe050&quot;,
+51:   &quot;ip&quot;: &quot;181.135.33.130&quot;,
+52:   &quot;authenticationtype&quot;: &quot;CREDENCIAL&quot;,
+53:   &quot;transactiontype&quot;: &quot;NO_MONETARIA&quot;,
+54:   &quot;transactionstate&quot;: &quot;exitosa&quot;,
+55:   &quot;documenttypecode&quot;: &quot;TIPDOC_FS001&quot;,
+56:   &quot;documenttype&quot;: &quot;CC&quot;,
+57:   &quot;documentnumber&quot;: &quot;1998226634&quot;,
+58:   &quot;brandmodel&quot;: &quot;HUAWEI GLK-LX2&quot;,
+59:   &quot;osversion&quot;: &quot;HUAWEI 10&quot;,
+60:   &quot;browser&quot;: &quot;Chrome&quot;,
+61:   &quot;appversion&quot;: &quot;4.0.0&quot;,
+62:   &quot;excludeitc&quot;: false,
+63:   &quot;field1&quot;: &quot;SI&quot;,
+64:   &quot;trxDate&quot;: 4.5375983602117444664446592e+25
+65: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:11 Expected ; but found :
+&quot;sessionid&quot;: &quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;,
+           ^
+Unnamed:2:17 Expected ; but found :
+  &quot;transactionid&quot;: &quot;f3e288f0-346e-11ed-49b3-458742914e94&quot;,
+                 ^
+Unnamed:3:18 Expected ; but found :
+  &quot;initialyeartrx&quot;: 2022,
+                  ^
+Unnamed:4:19 Expected ; but found :
+  &quot;initialmonthtrx&quot;: 9,
+                   ^
+Unnamed:5:17 Expected ; but found :
+  &quot;initialdaytrx&quot;: 14,
+                 ^
+Unnamed:6:18 Expected ; but found :
+  &quot;initialtrxhour&quot;: &quot;15510006&quot;,
+                  ^
+Unnamed:7:16 Expected ; but found :
+  &quot;finaltrxyear&quot;: 2022,
+                ^
+Unnamed:8:17 Expected ; but found :
+  &quot;finaltrxmonth&quot;: 9,
+                 ^
+Unnamed:9:15 Expected ; but found :
+  &quot;finaltrxday&quot;: 14,
+               ^
+Unnamed:10:16 Expected ; but found :
+  &quot;finaltrxhour&quot;: &quot;03510007&quot;,
+                ^
+Unnamed:11:19 Expected ; but found :
+  &quot;transactioncode&quot;: &quot;0369&quot;,
+                   ^
+Unnamed:12:23 Expected ; but found :
+  &quot;transactioncodedesc&quot;: &quot;Autenticacion psna natural&quot;,
+                       ^
+Unnamed:13:16 Expected ; but found :
+  &quot;responsecode&quot;: &quot;0000&quot;,
+                ^
+Unnamed:14:20 Expected ; but found :
+  &quot;responsecodedesc&quot;: &quot;SUCCESS&quot;,
+                    ^
+Unnamed:15:17 Expected ; but found :
+  &quot;technicalcode&quot;: &quot;0000&quot;,
+                 ^
+Unnamed:16:11 Expected ; but found :
+  &quot;channel&quot;: &quot;APP&quot;,
+           ^
+Unnamed:17:16 Expected ; but found :
+  &quot;devicenameid&quot;: &quot;29e826c303bfe050&quot;,
+                ^
+Unnamed:18:6 Expected ; but found :
+  &quot;ip&quot;: &quot;181.135.33.130&quot;,
+      ^
+Unnamed:19:22 Expected ; but found :
+  &quot;authenticationtype&quot;: &quot;CREDENCIAL&quot;,
+                      ^
+Unnamed:20:19 Expected ; but found :
+  &quot;transactiontype&quot;: &quot;NO_MONETARIA&quot;,
+                   ^
+Unnamed:21:20 Expected ; but found :
+  &quot;transactionstate&quot;: &quot;exitosa&quot;,
+                    ^
+Unnamed:22:20 Expected ; but found :
+  &quot;documenttypecode&quot;: &quot;TIPDOC_FS001&quot;,
+                    ^
+Unnamed:23:16 Expected ; but found :
+  &quot;documenttype&quot;: &quot;CC&quot;,
+                ^
+Unnamed:24:18 Expected ; but found :
+  &quot;documentnumber&quot;: &quot;1998226634&quot;,
+                  ^
+Unnamed:25:14 Expected ; but found :
+  &quot;brandmodel&quot;: &quot;HUAWEI GLK-LX2&quot;,
+              ^
+Unnamed:26:13 Expected ; but found :
+  &quot;osversion&quot;: &quot;HUAWEI 10&quot;,
+             ^
+Unnamed:27:11 Expected ; but found :
+  &quot;browser&quot;: &quot;Chrome&quot;,
+           ^
+Unnamed:28:14 Expected ; but found :
+  &quot;appversion&quot;: &quot;4.0.0&quot;,
+              ^
+Unnamed:29:14 Expected ; but found :
+  &quot;excludeitc&quot;: false,
+              ^
+Unnamed:30:10 Expected ; but found :
+  &quot;field1&quot;: &quot;SI&quot;,
+          ^
+Unnamed:31:11 Expected ; but found :
+  &quot;trxDate&quot;: 4.5375983602117444664446592e+25
+           ^
+Unnamed:32:0 Expected eof but found }
+}
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:401)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:141)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:137)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1344)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:57)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:233)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1346)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2373)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2292)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:57)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:129)
+- &lt;js&gt;.:program(Unnamed:1)
+
+classpath:features/s3.feature:24
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>print contS3.sessionid</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>match contS3 contains &quot;sessionid&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
