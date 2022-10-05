@@ -1,6 +1,6 @@
 function fn(){
-    karate.configure('connectTimeout', 10000);
-    karate.configure('readTimeout', 10000);
+    karate.configure('connectTimeout', 1000);
+    karate.configure('readTimeout', 1000);
     karate.configure ('ssl', true);
     return {
         aws:{

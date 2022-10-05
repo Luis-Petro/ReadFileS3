@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>pruebas s3</td>
-            <td>29 sep 2022, 10:12</td>
+            <td>05 oct 2022, 08:40</td>
     </tr>
   </tbody>
 </table>
@@ -128,18 +128,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Validate</td>
-                    <td      class="passed"    >2</td>
+                    <td >0</td>
           <td      class="failed"    >1</td>
+          <td     class="skipped"   >3</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td class="total">3</td>
+          <td class="total">4</td>
 
           <td >0</td>
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="10039889300">10s 039ms</td>
+          <td class="duration" data-value="13103719200">13s 103ms</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -182,14 +182,14 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">10s 039ms</span>
+  <span class="lead-duration duration">13s 103ms</span>
 
 
     <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
 <div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">I want to</span>
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Validate field in file S3</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -219,53 +219,11 @@ $(document).ready(function() {
   <div id="steps-2" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">aws.wait(10000)</span>
-  
-  <span class="lead-duration duration">10s 020ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">def contS3 = read(&quot;../evaluation/result.json&quot;)</span>
-  
-  <span class="lead-duration duration">002ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
 <div class="brief failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">match contS3.sessionid == &quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;</span>
+  <span class="keyword indention">Given</span>
+  <span class="name">json resJson =  aws.readFileS3(bucket,fileName)</span>
   
-  <span class="lead-duration duration">017ms</span>
+  <span class="lead-duration duration">13s 103ms</span>
 
   </div>
 
@@ -279,12 +237,18 @@ $(document).ready(function() {
       <div id="msg-3" class="collapse collapsable-details  in ">
         <pre>js failed:
 &gt;&gt;&gt;&gt;
-01: contS3.sessionid
+01: aws.readFileS3(bucket,fileName)
 &lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;sessionid&quot; from null
-- &lt;js&gt;.:program(Unnamed:1)
+org.graalvm.polyglot.PolyglotException: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 8B5DP66GE7B6JPNH; S3 Extended Request ID: wyYbap7feY/RKjgcWRVTl5dIGB32t/6GmoTJHi4uQ9Gl39R9HQ8nw3r3VSwLe4B+kw8XA/RrU0c=)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1862)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1415)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1384)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1154)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:811)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:779)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:753)
 
-classpath:features/s3.feature:30</pre>
+classpath:features/s3.feature:23</pre>
       </div>
     </div>
   </div>
@@ -298,20 +262,89 @@ classpath:features/s3.feature:30</pre>
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>10:12:28.674 classpath:features/s3.feature:30
-Then match contS3.sessionid == &quot;dc549110-346e-11ed-4991-41894cb44e9e&quot;
+        <pre>08:40:39.946 classpath:features/s3.feature:23
+Given json resJson =  aws.readFileS3(bucket,fileName)
 js failed:
 &gt;&gt;&gt;&gt;
-01: contS3.sessionid
+01: aws.readFileS3(bucket,fileName)
 &lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;sessionid&quot; from null
-- &lt;js&gt;.:program(Unnamed:1)
+org.graalvm.polyglot.PolyglotException: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 8B5DP66GE7B6JPNH; S3 Extended Request ID: wyYbap7feY/RKjgcWRVTl5dIGB32t/6GmoTJHi4uQ9Gl39R9HQ8nw3r3VSwLe4B+kw8XA/RrU0c=)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1862)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1415)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1384)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1154)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:811)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:779)
+- com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:753)
 
-classpath:features/s3.feature:30
+classpath:features/s3.feature:23
 </pre>
       </div>
     </div>
   </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">print resJson</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">match resJson.documentType   == &quot;CC&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match resJson.documentNumber == &quot;202203282&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
 
         
 

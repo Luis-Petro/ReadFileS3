@@ -1,8 +1,8 @@
 Feature: get the log
   Background:
     * def urlbase = "https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1"
-    * def fileName = "PruebaUno.log"
-    * def bucket = "bucketpruebas15"
+    * def fileName = "year=2022"
+    * def bucket = "nu0286001-central-channel-repository-qa-daily-raw-date"
     * def aws = Java.type('AWS.AwsConnect')
 
   @IfExist
@@ -14,14 +14,19 @@ Feature: get the log
 
   @ListS3
   Scenario: I want to list all files
-    Given def bol = aws.filesInS3(bucket)
+    Given def bol = aws.ShowContent(bucket)
     When print bol
     Then match bol contains fileName
 
-  @DownloadFileS3
-  Scenario: I want to list get a fill
-    Given json resjson =  aws.downloadFileS3(bucket,fileName)
-    When print resjson
-    When print resjson.transactionid
-    Then match resjson.transactionid == "f3e288f0-346e-11ed-49b3-458742914e94"
+  @Validate
+  Scenario Outline: Validate field in file S3
+    Given json resJson =  aws.readFileS3(bucket,fileName)
+    When  print resJson
+    Then  match resJson.documentType   == "<documenttype>"
+    And   match resJson.documentNumber == "<documentnumber>"
+
+    Examples:
+      |   documenttype   | documentnumber   |
+      |    CC            |   202203282    |
+
 
