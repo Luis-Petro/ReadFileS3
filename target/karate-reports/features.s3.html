@@ -37,27 +37,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">2</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
     </div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2022-10-05 08:40:40 AM</div>
+    <div>2022-10-20 04:59:31 PM</div>
   </div>        
 </div>
 
         <div class="nav-container">
           <div class="nav-item failed">
-            <a href="#[1:9]"><span>[1:9]</span> <span>I want to list the files</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[2:16]"><span>[2:16]</span> <span>I want to list all files</span></a>
-          </div>
-          <div class="nav-item failed">
-            <a href="#[3.1:30]"><span>[3.1:30]</span> <span>Validate field in file S3</span></a>
+            <a href="#[1:9]"><span>[1:9]</span> <span>Validate last register</span></a>
           </div>
         </div>
       </div>
@@ -74,16 +68,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div class="scenario-heading" id="[1:9]">
             <div class="heading-container">
               <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">IfExist</a>
+                <a class="badge badge-primary" href="karate-tags.html">ValidateLastRegister</a>
               </div>
               <div class="scenario-keyword">
                 Scenario: <span>[1:9]</span>
-                <span class="scenario-name">I want to list the files</span>
+                <span class="scenario-name">Validate last register</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>13348</span>
+              <span>ms:</span>&nbsp;<span>2285</span>
             </div>
           </div>
           <div class="step-row">
@@ -103,7 +97,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">3</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def urlbase = &quot;https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1&quot;</span>
+        <span>*</span>&nbsp;<span>def bucket = &quot;nu0286001-central-channel-repository-qa-daily-raw-data&quot;</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -131,66 +125,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">4</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fileName = &quot;year=2022&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:9]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def bucket = &quot;nu0286001-central-channel-repository-qa-daily-raw-date&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:9]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def aws = Java.type(&#39;AWS.AwsConnect&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">21</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
@@ -215,10 +153,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">10</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>configure ssl = true</span>
+        <span>Given</span>&nbsp;<span>def result = aws.readFileS3(bucket)</span>
       </div>
     </div>
-    <div class="time-cell passed">6</div>
+    <div class="time-cell passed">2252</div>
   </div>
 
    
@@ -243,10 +181,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>def bol = aws.checkIfFileExists(bucket, fileName)</span>
+        <span>When</span>&nbsp;<span>print result</span>
       </div>
     </div>
-    <div class="time-cell passed">13312</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
@@ -255,7 +193,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.11">16:59:31.975 [print] {&quot;sessionId&quot;:&quot;0f60e7eb-bf3f-a7de-65f7-9e629f61b6d8&quot;,&quot;transactionId&quot;:&quot;8301941e-6e21-483c-f736-a11691f7c5a7&quot;,&quot;initialYearTrx&quot;:2022,&quot;initialMonthTrx&quot;:10,&quot;initialDayTrx&quot;:20,&quot;initialTrxHour&quot;:&quot;16560020&quot;,&quot;finalTrxYear&quot;:2022,&quot;finalTrxMonth&quot;:10,&quot;finalTrxDay&quot;:20,&quot;finalTrxHour&quot;:&quot;16560020&quot;,&quot;transactionCode&quot;:&quot;0385&quot;,&quot;transactionCodeDesc&quot;:&quot;Autenticación transitoria SVN&quot;,&quot;responseCode&quot;:&quot;0000&quot;,&quot;responseCodeDesc&quot;:&quot;00&quot;,&quot;technicalCode&quot;:&quot;SUCCESS&quot;,&quot;channel&quot;:&quot;NEG&quot;,&quot;deviceNameId&quot;:&quot;WEB&quot;,&quot;ip&quot;:&quot;10.2.1.11&quot;,&quot;authenticationType&quot;:null,&quot;currency&quot;:null,&quot;localAmount&quot;:null,&quot;internationalAmount&quot;:null,&quot;establishmentUniqueCode&quot;:null,&quot;cardNumber&quot;:null,&quot;originProductType&quot;:null,&quot;originProductNumber&quot;:null,&quot;destinyProductType&quot;:null,&quot;destinyProductNumber&quot;:null,&quot;destinyProductRelation&quot;:null,&quot;transactionMode&quot;:null,&quot;transactionVoucherNumber&quot;:null,&quot;destinyBankCode&quot;:null,&quot;originBankCode&quot;:null,&quot;agreementCode&quot;:null,&quot;reference&quot;:null,&quot;transactionType&quot;:&quot;No_monetaria&quot;,&quot;inputTransactionMode&quot;:null,&quot;transactionState&quot;:&quot;EXITOSA&quot;,&quot;commission&quot;:null,&quot;transactionValule&quot;:null,&quot;throwbackId&quot;:null,&quot;latitude&quot;:null,&quot;length&quot;:null,&quot;documentTypeCode&quot;:&quot;TIPDOC_FS001&quot;,&quot;documentType&quot;:&quot;CC&quot;,&quot;documentNumber&quot;:&quot;202012218&quot;,&quot;customerName&quot;:&quot;EMPRESA DIDIER&quot;,&quot;authorizedUserdocumentTypeCode&quot;:&quot;TIPDOC_FS001&quot;,&quot;authorizedUserdocumentType&quot;:&quot;CC&quot;,&quot;authorizedUserdocumentNumber&quot;:&quot;202012218&quot;,&quot;authorizedUserName&quot;:&quot;DIDIER JOVANNY NARVAEZ PRUEBA2&quot;,&quot;brandModel&quot;:&quot;desktop&quot;,&quot;osVersion&quot;:&quot;Windows x64 10.0&quot;,&quot;browser&quot;:&quot;Chrome 106.0&quot;,&quot;mobileOperator&quot;:null,&quot;appVersion&quot;:&quot;1.0&quot;,&quot;sharedKey&quot;:null,&quot;agreementTermsConditions&quot;:null,&quot;versionTermsConditions&quot;:null,&quot;agreementTermsConditionsDate&quot;:null,&quot;excludeITC&quot;:false,&quot;token&quot;:null,&quot;changeRate&quot;:null,&quot;totalBatchRecords&quot;:null,&quot;value4&quot;:null,&quot;value5&quot;:null,&quot;value6&quot;:null,&quot;isD2B&quot;:&quot;SI&quot;,&quot;serialToken&quot;:null,&quot;entitlement&quot;:null,&quot;batchName&quot;:null,&quot;loadMechanism&quot;:null,&quot;paymentType&quot;:null,&quot;transactionGroup&quot;:null,&quot;targetCurrency&quot;:null,&quot;field9&quot;:null} 
+</div>   
 
   
 
@@ -268,42 +207,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>print bol</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.12">08:40:40.161 [print] false 
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref failed">13</div>
+      <div class="step-ref failed">12</div>
       
       <div class="step-cell failed">
-        <span>Then</span>&nbsp;<span>match bol == true</span>
+        <span>Then</span>&nbsp;<span>match result.transactionId contains &quot;d26304c5-f2e3-71a1-3c75-0279b432aff1&quot;</span>
       </div>
     </div>
-    <div class="time-cell failed">3</div>
+    <div class="time-cell failed">17</div>
   </div>
 
    
@@ -312,500 +222,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13">08:40:40.165 classpath:features/s3.feature:13
-Then match bol == true
-match failed: EQUALS
-  $ | not equal (BOOLEAN:BOOLEAN)
-  false
-  true
+  <div class="preformatted" data-parent="0.12">16:59:31.994 classpath:features/s3.feature:12
+Then match result.transactionId contains &quot;d26304c5-f2e3-71a1-3c75-0279b432aff1&quot;
+match failed: CONTAINS
+  $ | data types don&#39;t match (NULL:STRING)
+  null
+  &#39;d26304c5-f2e3-71a1-3c75-0279b432aff1&#39;
 
-classpath:features/s3.feature:13
+
+classpath:features/s3.feature:12
 </div>   
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2:16]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">ListS3</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2:16]</span>
-                <span class="scenario-name">I want to list all files</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>13151</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2:16]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2:16]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.3">
-      <div class="step-ref bg-step">3</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def urlbase = &quot;https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:16]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fileName = &quot;year=2022&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:16]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def bucket = &quot;nu0286001-central-channel-repository-qa-daily-raw-date&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:16]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def aws = Java.type(&#39;AWS.AwsConnect&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">21</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref passed">17</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>def bol = aws.ShowContent(bucket)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">13093</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref passed">18</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>print bol</span>
-      </div>
-    </div>
-    <div class="time-cell passed">15</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.18">08:40:39.946 [print] , year=2020/, year=2021/, year=2022/, year=2022/month=09/, year=2022/month=10/, year=2022/month=10/day=01/, year=2022/month=10/day=02/, year=2022/month=10/day=03/, year=2022/month=10/day=03/hour=00/, year=2022/month=10/day=03/hour=01/, year=2022/month=10/day=03/hour=01/PruebaUno (1).log, year=2022/month=10/day=03/hour=01/nu0286001-qa-centralrepo-firehose-deliverystream-13-2022-10-03-19-43-07-36e7281e-1931-4b09-9553-004ed383c6fb, year=2022/month=10/day=03/hour=02/, year=2022/month=10/day=10/, year=2022/month=11/ 
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref passed">19</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>match bol contains fileName</span>
-      </div>
-    </div>
-    <div class="time-cell passed">18</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[3.1:30]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">Validate</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[3.1:30]</span>
-                <span class="scenario-name">Validate field in file S3</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>13129</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[3.1:30]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[3.1:30]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.3">
-      <div class="step-ref bg-step">3</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def urlbase = &quot;https://s3.console.aws.amazon.com/s3/buckets?region=us-east-1&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3.1:30]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def fileName = &quot;year=2022&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3.1:30]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def bucket = &quot;nu0286001-central-channel-repository-qa-daily-raw-date&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3.1:30]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def aws = Java.type(&#39;AWS.AwsConnect&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">21</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.23">
-      <div class="step-ref failed">23</div>
-      
-      <div class="step-cell failed">
-        <span>Given</span>&nbsp;<span>json resJson =  aws.readFileS3(bucket,fileName)</span>
-      </div>
-    </div>
-    <div class="time-cell failed">13104</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.23">08:40:39.946 classpath:features/s3.feature:23
-Given json resJson =  aws.readFileS3(bucket,fileName)
-js failed:
-&gt;&gt;&gt;&gt;
-01: aws.readFileS3(bucket,fileName)
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: The specified key does not exist. (Service: Amazon S3; Status Code: 404; Error Code: NoSuchKey; Request ID: 8B5DP66GE7B6JPNH; S3 Extended Request ID: wyYbap7feY/RKjgcWRVTl5dIGB32t/6GmoTJHi4uQ9Gl39R9HQ8nw3r3VSwLe4B+kw8XA/RrU0c=)
-- com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleErrorResponse(AmazonHttpClient.java:1862)
-- com.amazonaws.http.AmazonHttpClient$RequestExecutor.handleServiceErrorResponse(AmazonHttpClient.java:1415)
-- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1384)
-- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1154)
-- com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:811)
-- com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:779)
-- com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:753)
-
-classpath:features/s3.feature:23
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.24">
-      <div class="step-ref skipped">24</div>
-      
-      <div class="step-cell skipped">
-        <span>When</span>&nbsp;<span>print resJson</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.25">
-      <div class="step-ref skipped">25</div>
-      
-      <div class="step-cell skipped">
-        <span>Then</span>&nbsp;<span>match resJson.documentType   == &quot;CC&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.26">
-      <div class="step-ref skipped">26</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match resJson.documentNumber == &quot;202203282&quot;</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
 
   
 
