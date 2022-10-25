@@ -17,7 +17,7 @@ public class s3Runner {
         Results results = Runner.path("classpath:features/s3.feature")
                 .outputCucumberJson(true)
                 .tags("~@ignore")
-                .parallel(0);
+                .parallel(4);
         generateReport(results.getReportDir());
         Assertions.assertTrue(results.getFailCount() == 0, results.getErrorMessages());
     }
