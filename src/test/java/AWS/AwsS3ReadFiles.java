@@ -6,7 +6,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class AwsS3ReadFiles {
+public class
+
+AwsS3ReadFiles {
 
     public static String readFileInS3(String bucketName) throws IOException {
         String fileNameLastRegister = AwsS3ListFiles.lastRegisterInBucket(bucketName);
